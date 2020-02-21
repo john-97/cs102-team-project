@@ -11,7 +11,7 @@ public class SocialMagnet {
     do {
       try {
         // Welcome String
-        String welcome = "\r\n\r\n== Social Magnet :: Welcome ==\r\nGood Morning, anonymous!\r\n1. Register\r\n2. Login\r\n3. Exit\r\nEnter your choice >";
+        String welcome = "\r\n\r\n== Social Magnet :: Welcome ==\r\nGood Morning, anonymous!\r\n1. Register\r\n2. Login\r\n3. Exit\r\nEnter your choice > ";
         System.out.print(welcome);
 
         // Form - Functionality (wth err loop)
