@@ -25,6 +25,5 @@ public class Newsfeed {
       replies.add(new Reply(new Date(), new User("u", "n"), "String"));
       posts.add(new Post(user, likes, dislikes, replies));
     }
-
   }
 }
