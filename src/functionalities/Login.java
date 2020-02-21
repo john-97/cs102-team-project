@@ -1,6 +1,7 @@
 package functionalities;
 
-import java.util.*;
+import java.util.Scanner;
+import entities.User;
 
 public class Login {
   public static void login() {
@@ -10,6 +11,7 @@ public class Login {
     boolean error = true;
     String username = "";
     String password = "";
+    String name = "name";
     do {
       try {
         Scanner sc = new Scanner(System.in);
@@ -19,12 +21,15 @@ public class Login {
         password = sc.nextLine();
         // Form Validation throw exception
         // Password Check throw exception
+        // Save name
         error = false;
       } catch (Exception e) {
         System.out.println(e);
       }
-
     } while (error);
     System.out.println(username + password);
+
+    // LOGIN
+    if (name != "") Main.main(new User(username, name, password));
   }
 }

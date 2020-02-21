@@ -1,6 +1,6 @@
 package functionalities;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Registration {
   public static void registration() {
@@ -31,6 +31,6 @@ public class Registration {
     } while (error);
     System.out.println(username + name + password + confirmPassword);
 
-    // Add to db
+    // Add to database
   }
 }

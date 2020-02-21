@@ -1,7 +1,8 @@
 package start;
-import java.util.*;
 
-import functionalities.*;
+import java.util.Scanner;
+import functionalities.Registration;
+import functionalities.Login;
 
 public class SocialMagnet {
   public static void main(String[] args) {
