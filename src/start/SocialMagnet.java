@@ -13,7 +13,7 @@ public class SocialMagnet {
         String welcome = "\r\n\r\n== Social Magnet :: Welcome ==\r\nGood Morning, anonymous!\r\n1. Register\r\n2. Login\r\n3. Exit\r\nEnter your choice >";
         System.out.print(welcome);
 
-        // choice entry (wth err loop)
+        // Form - Functionality (wth err loop)
         do {
           if (choice < 1 || choice > 3) System.out.println("Please enter a choice between 1 & 3");
           Scanner sc = new Scanner(System.in);
@@ -22,6 +22,7 @@ public class SocialMagnet {
 
         // Run Static Method of Login/ Register
         if (choice == 1) Registration.registration();
+        if (choice == 2) Login.login();
       } catch (Exception e) {
         System.out.println(e);
       }
