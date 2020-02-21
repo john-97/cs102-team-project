@@ -13,18 +13,18 @@ public class Newsfeed {
     // Get Array of Post from database
     ArrayList<Post> posts = new ArrayList<>();
     for (int i = 0; i < 5; i++) {
-      User user = new User("u", "n", "p");
+      User user = new User("u", "n");
       ArrayList<User> likes = new ArrayList<>();
-      likes.add(new User("u", "n", "p"));
-      likes.add(new User("u", "n", "p"));
+      likes.add(new User("u", "n"));
+      likes.add(new User("u", "n"));
       ArrayList<User> dislikes = new ArrayList<>();
-      dislikes.add(new User("u", "n", "p"));
-      dislikes.add(new User("u", "n", "p"));
+      dislikes.add(new User("u", "n"));
+      dislikes.add(new User("u", "n"));
       ArrayList<Reply> replies = new ArrayList<>();
-      replies.add(new Reply(new Date(), new User("u", "n", "p"), "String"));
-      replies.add(new Reply(new Date(), new User("u", "n", "p"), "String"));
+      replies.add(new Reply(new Date(), new User("u", "n"), "String"));
+      replies.add(new Reply(new Date(), new User("u", "n"), "String"));
       posts.add(new Post(user, likes, dislikes, replies));
     }
-    
+
   }
 }

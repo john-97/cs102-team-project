@@ -30,6 +30,6 @@ public class Login {
     System.out.println(username + password);
 
     // LOGIN
-    if (name != "") Main.main(new User(username, name, password));
+    if (name != "") Main.main(new User(username, name));
   }
 }
