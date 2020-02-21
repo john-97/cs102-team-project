@@ -11,6 +11,9 @@ public class Main {
         System.out.print("\r\n\r\n== Social Magnet :: Main Menu ==\r\nWelcome, " + user.getName() + "!\r\n1. Newsfeed\r\n2. My Wall\r\n3. My Friends\r\n4. City Farmers\r\n5. Logout\r\nEnter your choice > ");
         Scanner sc = new Scanner(System.in);
         choice = sc.nextInt();
+        // Newsfeed
+        if (choice == 1) Newsfeed.newsfeed();
+        // City farmers
       } catch (Exception e) {
         System.out.println(e);
       }
