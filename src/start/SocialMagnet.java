@@ -1,7 +1,8 @@
 package start;
-import java.util.*;
 
-import functionalities.*;
+import java.util.Scanner;
+import functionalities.Registration;
+import functionalities.Login;
 
 public class SocialMagnet {
   public static void main(String[] args) {
@@ -10,10 +11,10 @@ public class SocialMagnet {
     do {
       try {
         // Welcome String
-        String welcome = "\r\n\r\n== Social Magnet :: Welcome ==\r\nGood Morning, anonymous!\r\n1. Register\r\n2. Login\r\n3. Exit\r\nEnter your choice >";
+        String welcome = "\r\n\r\n== Social Magnet :: Welcome ==\r\nGood Morning, anonymous!\r\n1. Register\r\n2. Login\r\n3. Exit\r\nEnter your choice > ";
         System.out.print(welcome);
 
-        // choice entry (wth err loop)
+        // Form - Functionality (wth err loop)
         do {
           if (choice < 1 || choice > 3) System.out.println("Please enter a choice between 1 & 3");
           Scanner sc = new Scanner(System.in);
@@ -22,6 +23,7 @@ public class SocialMagnet {
 
         // Run Static Method of Login/ Register
         if (choice == 1) Registration.registration();
+        if (choice == 2) Login.login();
       } catch (Exception e) {
         System.out.println(e);
       }
