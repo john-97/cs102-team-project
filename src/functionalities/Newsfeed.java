@@ -9,7 +9,7 @@ import entities.post.Reply;
 
 public class Newsfeed {
   public static void newsfeed() {
-    // Get Array of Post from database
+    // Get Array of Post from database (RUN FROM db FILE = returns ArrayList<Post>)
     ArrayList<Post> posts = new ArrayList<>();
     for (int i = 0; i < 5; i++) {
       User user = new User("u", "n");
@@ -33,7 +33,7 @@ public class Newsfeed {
       // Post
       System.out.printf("%d %s: %s\r\n[ %d like, %d dislikes ]\r\n", (i + 1), p.getUser().getName(), p.getPost(), p.getLikes().size(), p.getDislikes().size());
       // Replies
-      for (int j = 0; i < p.getReplies().size(); i++) {
+      for (int j = 0; j < p.getReplies().size(); j++) {
         Reply r = p.getReplies().get(j);
         System.out.printf(" %d.%d %s: %s\r\n", (i + 1), (j + 1), r.getUser().getName(), r.getReply());
       }
