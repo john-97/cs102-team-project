@@ -11,6 +11,7 @@ import entities.post.Reply;
 public class Newsfeed {
   private static void printPosts(ArrayList<Post> posts) {
     // List Post
+    System.out.println("\r\n\r\n== Social Magnet :: News Feed ==");
     for (int i = 0; i < posts.size(); i++) {
       Post p = posts.get(i);
       // Post
@@ -21,6 +22,7 @@ public class Newsfeed {
         System.out.printf(" %d.%d %s: %s\r\n", (i + 1), (j + 1), r.getUser(), r.getReply());
       }
     }
+    System.out.print("[M]ain | [T]hread > ");
   }
   private static void printThread(Post post, int postNum) {
     System.out.println("\r\n\r\n== Social Magnet :: View a Thread ==");
@@ -44,8 +46,8 @@ public class Newsfeed {
       System.out.printf(" %d. %s(%s)\r\n", (i + 1), d.getName(), d);
     }
   }
-  public static void newsfeed() {
-    // Get Array of Post from database (RUN FROM db FILE => returns ArrayList<Post>)
+
+  private static ArrayList<Post> postHelper() {
     ArrayList<Post> posts = new ArrayList<>();
     for (int i = 0; i < 5; i++) {
       User user = new User("u", "n");
@@ -60,13 +62,16 @@ public class Newsfeed {
       replies.add(new Reply(new Date(), new User("u", "n"), "String"));
       posts.add(new Post(user, "post", likes, dislikes, replies));
     }
+    return posts;
+  }
+  public static void newsfeed() {
+    // Get Array of Post from database (RUN FROM db FILE => returns ArrayList<Post>)
+    ArrayList<Post> posts = postHelper();
     // Print
     String option = " ";
-    System.out.println("\r\n\r\n== Social Magnet :: News Feed ==");
-    printPosts(posts);
     while (option.charAt(0) != 'M') {
       try {
-        System.out.print("[M]ain | [T]hread > ");
+        printPosts(posts);
         Scanner sc = new Scanner(System.in);
         option = sc.nextLine();
         if (option.charAt(0) == 'T') {
