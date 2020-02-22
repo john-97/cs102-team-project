@@ -1,1 +1,1 @@
-java -classpath classes start.SocialMagnet
+java -classpath classes:lib/* start.SocialMagnet

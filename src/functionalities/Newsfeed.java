@@ -9,7 +9,6 @@ import entities.post.Reply;
 
 public class Newsfeed {
   public static void newsfeed() {
-    System.out.println("\r\n\r\n== Social Magnet :: News Feed ==");
     // Get Array of Post from database
     ArrayList<Post> posts = new ArrayList<>();
     for (int i = 0; i < 5; i++) {
@@ -23,8 +22,21 @@ public class Newsfeed {
       ArrayList<Reply> replies = new ArrayList<>();
       replies.add(new Reply(new Date(), new User("u", "n"), "String"));
       replies.add(new Reply(new Date(), new User("u", "n"), "String"));
-      posts.add(new Post(user, likes, dislikes, replies));
+      System.out.println("FAG");
+      // NULL pointer exception
+      posts.add(new Post(user, "post", likes, dislikes, replies));
     }
-
+    // List Post
+    System.out.println("\r\n\r\n== Social Magnet :: News Feed ==");
+    for (int i = 0; i < posts.size(); i++) {
+      Post p = posts.get(i);
+      // Post
+      System.out.printf("%d %s: %s\r\n[ %d like, %d dislikes ]\r\n", (i + 1), p.getUser().getName(), p.getPost(), p.getLikes().size(), p.getDislikes().size());
+      // Replies
+      for (int j = 0; i < p.getReplies().size(); i++) {
+        Reply r = p.getReplies().get(j);
+        System.out.printf(" %d.%d %s: %s\r\n", (i + 1), (j + 1), r.getUser().getName(), r.getReply());
+      }
+    }
   }
 }
