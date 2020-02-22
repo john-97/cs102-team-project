@@ -5,17 +5,22 @@ import entities.User;
 
 public class Post {
   private User user;
+  private String post;
   private ArrayList<User> likes;
   private ArrayList<User> dislikes;
   private ArrayList<Reply> replies;
-  public Post(User user, ArrayList<User> likes, ArrayList<User> dislikes, ArrayList<Reply> replies) {
+  public Post(User user, String post, ArrayList<User> likes, ArrayList<User> dislikes, ArrayList<Reply> replies) {
     this.user = user;
-    this.likes.addAll(likes);
-    this.dislikes.addAll(dislikes);
-    this.replies.addAll(replies);
+    this.post = post;
+    this.likes = likes;
+    this.dislikes = dislikes;
+    this.replies = replies;
   }
   public User getUser() {
     return this.user;
+  }
+  public String getPost() {
+    return this.post;
   }
   public ArrayList<User> getLikes() {
     return this.likes;
