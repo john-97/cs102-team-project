@@ -1,1 +1,1 @@
-javac -d classes -classpath src:lib/* src/start/SocialMagnet.java
+javac -d classes -classpath src/main/java:lib/* src/main/java/start/App.java
